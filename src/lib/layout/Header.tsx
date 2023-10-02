@@ -4,7 +4,13 @@ import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   return (
-    <Flex as="header" width="full" align="center">
+    <Flex
+      as="header"
+      width="full"
+      align="center"
+      borderBottomWidth={1}
+      padding={2}
+    >
       <Box marginLeft="auto">
         <ThemeToggle />
       </Box>

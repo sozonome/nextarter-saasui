@@ -1,8 +1,5 @@
-import {
-  ChakraProvider,
-  ColorModeScript,
-  cookieStorageManager,
-} from '@chakra-ui/react';
+import { ColorModeScript, cookieStorageManager } from '@chakra-ui/react';
+import { SaasProvider } from '@saas-ui/react';
 
 import customTheme from '~/lib/styles/theme/index';
 
@@ -17,12 +14,9 @@ export const Chakra = ({ children }: ChakraProps) => {
         initialColorMode={customTheme.config?.initialColorMode}
         type="cookie"
       />
-      <ChakraProvider
-        colorModeManager={cookieStorageManager}
-        theme={customTheme}
-      >
+      <SaasProvider colorModeManager={cookieStorageManager} theme={customTheme}>
         {children}
-      </ChakraProvider>
+      </SaasProvider>
     </>
   );
 };
